@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - preConditions:
+    - runningAs:
+        username: liquibase
+  - include:
+      file: migrations/001-create-book-table.yaml
+  - include:
+      file: migrations/002-create-person-table.yaml
