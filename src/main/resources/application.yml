@@ -18,7 +18,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
   liquibase:
-    change-log: classpath:/db/changelog/changelog-master.xml
+    change-log: classpath:/db/changelog/changelog-master.yaml
 management:
   endpoints:
     web:

@@ -1,33 +1,22 @@
 databaseChangeLog:
   - preConditions:
-    - runningAs:
-        username: liquibase
+      - runningAs:
+          username: sa
+
   - changeSet:
-      id: 1
+      id: 002-create-person-table-createSequence
       author: reyabreu
       changes:
-        - createTable:
-            tableName: book
-            columns:
-              - column:
-                  name: id
-                  type: long
-                  autoIncrement: false
-                  constraints:
-                    primaryKey: true
-                    nullable: false
-              - column:
-                  name: first_name
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: last_name
-                  type: varchar(255)
-                  constraints:
-                    nullable: false
+        - createSequence:
+            cycle: true
+            incrementBy: 10
+            ordered: true
+            schemaName: public
+            sequenceName: HIBERNATE_SEQUENCE
+            startValue: 100
+
   - changeSet:
-      id: 1
+      id: 002-create-person-table
       author: reyabreu
       changes:
         - createTable:
@@ -50,16 +39,3 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
-  - changeSet:
-      id: 2
-      author: reyabreu
-      changes:
-        - insert:
-            tableName: person
-            columns:
-              - column:
-                  name: first_name
-                  value: Reynaldo
-              - column:
-                  name: last_name
-                  value: Abreu

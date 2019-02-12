@@ -1,24 +1,29 @@
-changeSet:
-  id: 001-create-book-table
-  author: reyabreu
-  changes:
-    - createTable:
-        tableName: book
-        columns:
-          - column:
-              name: id
-              type: long
-              constraints:
-                primaryKey: true
-                nullable: false
-          - column:
-              name: title
-              type: varchar(255)
-              constraints:
-                nullable: false
-                unique: true
-          - column:
-              name: author
-              type: varchar(255)
-              constraints:
-                nullable: false
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: sa
+
+  - changeSet:
+      id: 001-create-book-table
+      author: reyabreu
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: author
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

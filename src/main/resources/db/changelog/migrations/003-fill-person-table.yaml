@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: sa
+
+  - changeSet:
+      id: 003-fill-person-table
+      author: reyabreu
+      changes:
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: first_name
+                  value: Reynaldo
+              - column:
+                  name: last_name
+                  value: Abreu

@@ -1,8 +1,11 @@
 databaseChangeLog:
   - preConditions:
     - runningAs:
-        username: liquibase
+        username: sa
+
   - include:
-      file: migrations/001-create-book-table.yaml
+      file: classpath:/db/changelog/migrations/001-create-book-table.yaml
   - include:
-      file: migrations/002-create-person-table.yaml
+      file: classpath:/db/changelog/migrations/002-create-person-table.yaml
+  - include:
+      file: classpath:/db/changelog/migrations/003-fill-person-table.yaml
