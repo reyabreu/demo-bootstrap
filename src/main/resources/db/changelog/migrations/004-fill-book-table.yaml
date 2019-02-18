@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: sa
+
+  - changeSet:
+      id: 004-fill-book-table
+      author: reyabreu
+      changes:
+        - loadData:
+            encoding: UTF-8
+            file: classpath:/db/changelog/data/book-data.csv
+            quotchar: "\""
+            separator: ","
+            tableName: book
+            columns:
+              - column:
+                  name: title
+                  type: STRING
+              - column:
+                  name: author
+                  type: STRING

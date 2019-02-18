@@ -1,9 +1,10 @@
-package org.reyabreu.bootstrap;
+package org.reyabreu.bootstrap.web.controller;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.reyabreu.bootstrap.Application;
 import org.reyabreu.bootstrap.persistence.model.Book;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {Application.class}, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class LiveTest {
+public class TestBookController {
     private static final String API_ROOT = "http://localhost:8081/api/books";
 
     private Book createRandomBook() {

@@ -9,3 +9,5 @@ databaseChangeLog:
       file: classpath:/db/changelog/migrations/002-create-person-table.yaml
   - include:
       file: classpath:/db/changelog/migrations/003-fill-person-table.yaml
+  - include:
+      file: classpath:/db/changelog/migrations/004-fill-book-table.yaml
