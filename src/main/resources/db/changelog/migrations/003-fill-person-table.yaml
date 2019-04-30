@@ -16,3 +16,49 @@ databaseChangeLog:
               - column:
                   name: last_name
                   value: Abreu
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: first_name
+                  value: Daenerys
+              - column:
+                  name: last_name
+                  value: Targaryen
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: first_name
+                  value: Eddard
+              - column:
+                  name: last_name
+                  value: Stark
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: first_name
+                  value: Beric
+              - column:
+                  name: last_name
+                  value: Dondarrion
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: first_name
+                  value: Gregor
+              - column:
+                  name: last_name
+                  value: Clegane
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: first_name
+                  value: Magaery
+              - column:
+                  name: last_name
+                  value: Tyrell
+
